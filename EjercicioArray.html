@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EjercicioArray</title>
+
+    <script type="text/javascript">
+
+        let array1 = []
+
+        let agregar = function(){
+            let num1 = document.getElementById("campo1")
+            if (campo1.value.trim() == "" || campo1.value.trim() == " " ) {
+                alert('[ERROR] Debe introducir un elemento. El campo no puede estar vacío.');
+                return false;
+            }else{
+            let num = parseInt(num1.value)
+            array1.push(num);
+            campo2.value=array1
+            }
+        }
+         let aleatorio = function(){
+            rand = Math.random()*array1.length | 0
+            var valor = array1[rand]
+            campo3.value = valor
+         }
+
+
+    </script>
+
+
+</head>
+<body>
+    <h1>Ejercicio de arrays</h1>
+    
+        <p>Añade un elemento en el array</p>
+
+        Introduzca elemento: <input type="text" id="campo1" value=""/>
+        <button onclick="agregar()">Añadir</button>
+        </br>
+        Array: <input id= "campo2" type="text" id="texto" value=""/>
+        </br>
+        </br>
+        <button onclick="aleatorio()">Pulsa para sacar un elemento aleatorio</button>
+        </br>
+        Elemento aleatorio: <input id= "campo3" type="text" id="texto" value=""/>
+   
+</body>
+</html>
