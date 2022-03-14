@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script type="text/javascript">
+
+        let n1 = document.getElementById("campo1")
+        let n2 = document.getElementById("campo2")
+
+        let sumar = function(n1, n2){
+            num1 = parseInt(campo1.value)
+            num2 = parseInt(campo2.value)
+            campo3.value= num1+num2
+        }
+
+        let restar = function(n1, n2){
+            num1 = parseInt(campo1.value)
+            num2 = parseInt(campo2.value)
+            campo3.value= num1-num2
+        }
+
+        let multiplicar = function(n1, n2){
+            num1 = parseInt(campo1.value)
+            num2 = parseInt(campo2.value)
+            campo3.value= num1*num2
+        }
+
+        let dividir = function(n1, n2){
+            num1 = parseInt(campo1.value)
+            num2 = parseInt(campo2.value)
+            campo3.value= num1/num2
+        }
+    </script>
+
+</head>
+<body>
+    <div> 
+        <h1>Calculadora</h1>
+        Primer número<input type="text" id="campo1" value=""/>
+        <br>
+        Segundo número<input type="text" id="campo2" value=""/>
+        <br>
+        <p>Pulse en la operación que quiere realizar:</p>
+        <br>
+        <button onclick="sumar()">Suma</button>
+        <br>
+        <button onclick="restar()">Resta</button>
+        <br>
+        <button onclick="multiplicar()">Multiplicación</button>
+        <br>
+        <button onclick="dividir()">División</button>
+        <br>
+        <br>
+        Resultado: <input id="campo3" type="text" id="texto" value=""/>
+    </div>
+    
+</body>
+</html>
